@@ -1,0 +1,17 @@
+package com.ls.demo;
+
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+
+/**
+ * @Author: lishuai
+ * @CreateDate: 2018/11/7 20:04
+ */
+public class HelloWorldControllerTest {
+
+    @Test
+    public void testSayHello() {
+        assertEquals("Hello,World!",new HelloWorldController().sayHello());
+    }
+}
