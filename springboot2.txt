@@ -1,0 +1,4 @@
+1、springboot2默认的servlet容器使用的是Tomcat
+
+
+

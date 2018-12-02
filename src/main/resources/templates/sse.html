@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8" />
+    <title></title>
+</head>
+<body>
+sse
+<h1></h1>
+<div id="sse">
+
+</div>
+
+</body>
+</html>
+
+<script language="javascript" type="text/javascript">
+
+    var source = new EventSource('http://localhost:1111/sse/push');
+
+    source.onopen = function (event) {
+        console.log("EventSource open");
+    };
+
+    source.onmessage = function (event) {
+        //var data = event.data;
+        // handle message
+        console.log("get message", event);
+        console.log(event.data);
+        var dom = document.getElementById( "sse" );
+        dom.innerHTML=event.data;
+    };
+
+    source.onerror = function (event) {
+        // handle error event
+        console.log("get error",event);
+        source.close();
+    };
+
+    source.onclose = function (event) {
+        console.log("get close",event);
+        source.close();
+    }
+
+
+//    source.addEventListener('message', function(e) {
+//        console.log(e.data);
+//        var dom = document.getElementById( "sse" );
+//        dom.innerHTML=e.data;
+//    }, false);
+//
+//    source.addEventListener('open', function(e) {
+//        // Connection was opened.
+//    }, false);
+//
+//    source.addEventListener('error', function(e) {
+//        if (e.readyState == EventSource.CLOSED) {
+//            // Connection was closed.
+//        }
+//    }, false);
+//
+//    source.addEventListener('userlogin', function(e) {
+//        console.log(e.data);
+//    }, false);
+
+
+</script>

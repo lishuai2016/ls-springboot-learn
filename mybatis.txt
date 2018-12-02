@@ -1,0 +1,4 @@
+1、把SQL写在接口的方法上，然后使用@Mapper标注接口，就可以在使用的地方注入需要的接口；
+2、把SQL写在xml文件中，需要注意一下几点：
+2.1、在application.properties中配置xml文件的位置，如mybatis.mapper-locations=classpath*:mybatis/*Mapper.xml
+2.2、在启动类上添加mapper扫描注解，指定接口的包路径@MapperScan("com.ls.demo.mybatisxml")

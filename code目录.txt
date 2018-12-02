@@ -1,0 +1,50 @@
+包路径com.ls.demo
+---aop
+    ---LimitAspect 接口限流aop切面类
+    ---ServiceLimit接口限流自定义注解
+    ---WebLogAspect请求日志aop切面类
+    ---Servicelock接口  加在service层方法的注解锁，通过aop+lock实现synchronized的功能
+    ---LockAspect  对注解锁进行解析的切面类
+    ---Aspect测试切面类中各个方法执行顺序的切面类
+
+---util
+    ---SpringUtil  通过ApplicationContextAware接口来获取spring容器对象
+    ---IPUtils     解析用户的真实IP
+    ---HttpContextUtils  获取当前系统的HttpServletRequest请求
+
+---lock
+    ---LockDemo 测试synchronized和lock锁性能
+
+---distributedlock
+    ---redis
+        ---test
+            ---RedissonManager    根据配置信息获取Redisson实例
+            ---DistributedRedisLock 根据Redisson实例来加锁和释放锁
+            ---Main  并发多个线程来模型并发获取锁的测试程序
+    ---zookeeper
+        ---CuratorUtil
+        ---ZkLockUtil
+
+
+---bean
+
+---common
+    ---LoginContext 保存登录信息封装的工具类
+
+
+---exception
+    ---RRException 简单封装的异常类包含状态码、异常信息和抛出来的异常类
+
+
+
+
+
+
+
+
+
+
+
+
+
+

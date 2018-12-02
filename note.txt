@@ -1,0 +1,16 @@
+遇到的问题
+1、解决properties文件中文乱码问题
+设置 File Encodings的Transparent native-to-ascii conversion为true，具体步骤如下：依次点击
+File -> Settings -> Editor -> File Encodings
+将Properties Files (*.properties)下的Default encoding for properties files设置为UTF-8，将Transparent native-to-ascii conversion前的勾选上。
+2、controller的包必须和主程序application必须在同一个包路径下，否则访问不到
+3、定义properties属性的类，也必须和application必须在同一个包路径下，否则注入不了
+4、最新的springboot 不再默认支持velocity    因为velocity的官网更新慢
+5、swagger的访问路径:http://localhost:1111/swagger-ui.html
+6、编写一个实体类继承WebMvcConfigurer来添加拦截器
+
+
+
+
+
+https://github.com/dyc87112/SpringBoot-Learning
